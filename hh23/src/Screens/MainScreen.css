@@ -1,0 +1,271 @@
+.App {
+    text-align: center;
+    background-color: #E7F6F2;
+    
+    width: 100%;
+    overflow:-moz-hidden-unscrollable;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 105vh;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .MS-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .MS-button {
+    background-color: #0e8581;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 1rem 3.5rem;
+    border-radius: 0.25rem;
+    transition: 0.5s;
+    display: inline-block;
+    position: relative;
+    animation: fadeInOutAnimation2 1.5s 1;
+  }
+  
+  .MS-health-img {
+    width: 3%;
+    height: 15.5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+    animation: heartbeat 5s 1
+  }
+  
+  .MS-button:after {
+    color: white;
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 1rem;
+  }
+  
+  .MS-button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+    cursor: pointer;
+  }
+  
+  .MS-button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .MS-button-text{
+    color: white;
+  }
+  .MS-header {
+    background-color: #19af6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    -webkit-box-shadow: 0px 1px 20px #6ff3be;
+    -moz-box-shadow: 0px 1px 20px #04b4ab;
+    box-shadow: 0px 1px 20px #04b49a;
+    animation: fadeInOutAnimation 1.5s 1;
+    height: 15%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .MS-title {
+    font-weight: 200;
+    font-size: 1rem;
+  }
+  
+  .MS-main {
+    background-color: rgb(25, 24, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85%;
+    border-radius: .2rem;
+    margin: .75rem;
+    flex: 1 1 auto;
+    flex: auto;
+  }
+
+  .MS-cards {
+    background-color: rgb(25, 24, 27);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .MS-row {
+    display: flex;
+    margin-left: 1rem;
+    /* border: 1px black solid; */
+    max-height: 11vh;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  @keyframes fadeInOutAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.95, 0.95);
+      bottom: -200px
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+      bottom: 0;
+    }
+  
+  }
+  
+  @keyframes fadeInOutAnimation2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  
+  }
+  
+  @keyframes heartbeat
+  {
+    0%
+    {
+      transform: scale( .75 );
+    }
+    20%
+    {
+      transform: scale( 1 );
+    }
+    40%
+    {
+      transform: scale( .75 );
+    }
+    60%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .75 );
+    }
+    100%
+    {
+      transform: scale( 1 );
+    }
+  }
+  
+  .box-area li {
+  
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: 0%;
+    
+  }
+  
+  .box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: .5s;
+    animation-duration: 11s;
+    background: #0e8581;
+    opacity: 0.1;
+    z-index: 0;
+    bottom: 0%;
+  
+  }
+  
+  .box-area li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 0;
+    animation-duration: 6s;
+    bottom:8%;
+  }
+  
+  .box-area li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    bottom: 2%;
+  }
+  
+  .box-area li:nth-child(4) {
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    bottom: 5%;
+  }
+  
+  .box-area li:nth-child(5) {
+    left: 33%;
+    width: 30px;
+    height: 30px;
+    animation-delay: .25s;
+    animation-duration: 10s;
+    background-color: #30c785;
+    bottom: -4%;
+  }
+  
+  @keyframes animate {
+  
+    0% {
+      transition:1s;
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-60vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .box-area {
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 85vw;
+    margin: 0 auto;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

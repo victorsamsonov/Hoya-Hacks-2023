@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #E7F6F2;
+  background-color: #a9f2ab;
   
   width: 100%;
   overflow:-moz-hidden-unscrollable;
@@ -31,18 +31,23 @@
   background-color: #0e8581;
   display: inline-block;
   white-space: nowrap;
-  margin: 0 auto;
+  margin: auto;
   padding: 1rem 3.5rem;
   border-radius: 0.25rem;
   transition: 0.5s;
   display: inline-block;
   position: relative;
-  animation: fadeInOutAnimation2 1.5s 1;
+  /* margin-top: 100%;
+  margin-bottom: 100%; */
+  opacity: 1;
+  /* border: solid 1px red; */
+  min-height: 10%;
+ 
 }
 
 .HS-health-img {
-  width: 8%;
-  height: 45.5%;
+  width: 4%;
+  height: 35.5%;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 1rem;
@@ -57,12 +62,14 @@
   right: -20px;
   transition: 0.5s;
   font-size: 1rem;
+  
 }
 
 .HS-button:hover {
-  padding-right: 24px;
-  padding-left: 8px;
   cursor: pointer;
+  padding: 1.1rem 3.6rem;
+  /* border: solid 1px red */
+
 }
 
 .HS-button:hover:after {
@@ -71,11 +78,13 @@
 }
 .HS-button-text{
   color: white;
+  margin-top: 100%;
+  margin-bottom: 100%;
 }
 .HS-header {
   background-color: #19af6e;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -87,7 +96,6 @@
   height: 15%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
 
 h2 {
@@ -111,6 +119,77 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* border: 1px black solid; */
+  max-height: 11vh;
+}
+
+p {
+  font-size: 15px;
+}
+
+.HS-button-container {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* min-height: 100px; */
+  min-width:50%;
+  border: 1px solid black;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #1c2123;;
+  min-height: 60vh;
+  max-height: 60vh;
+  opacity: 0.8;
+  animation: fadeInOutAnimation2 1.5s 1;
+  /* #1c2123; */
+}
+
+.link {
+  /* border: 1 solid red; */
+  max-height:5px;
+}
+
+.HS-top-button-container {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #0081C9;
+  min-height: 5vh;
+  /* border: solid 1px red; */
+  width: 100%;
+}
+
+.HS-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.HS-service-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #03C988;
+  margin: auto 0;
+
+}
+
+.HS-service-text2{
+  margin: auto 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-left: 0.5rem;
+}
+
+.HS-service-img {
+  width: 5.5%;
+  margin: auto 0;
+  margin-left: .75rem;
+  
 }
 
 @keyframes fadeInOutAnimation {
@@ -128,6 +207,7 @@ h2 {
 }
 
 @keyframes fadeInOutAnimation2 {
+  
   0% {
     opacity: 0;
   }
@@ -188,7 +268,6 @@ h2 {
   opacity: 0.1;
   z-index: 0;
   bottom: 0%;
-
 }
 
 .box-area li:nth-child(2) {
@@ -259,3 +338,4 @@ h2 {
     transform: rotate(360deg);
   }
 }
+/* <a href="https://www.flaticon.com/free-icons/headache" title="headache icons">Headache icons created by Iconjam - Flaticon</a> */
